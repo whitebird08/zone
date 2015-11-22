@@ -81,5 +81,27 @@
   width: $size;
   height: $size;
   background: $bgColor url("../img/avatar-empty.svg") center no-repeat;
+  overflow: hidden;
+
+  img {
+    width: $size;
+    height: $size;
+  }
 }
+
+@mixin pendingAvatar($size, $margin:6px){
+  @include rounded(50%);
+  border: 3px dotted white;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  img {
+    @include rounded(50%);
+    margin: $margin;
+    width: 80%;
+    height: 80%;
+  }
+}
+
 

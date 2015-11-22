@@ -59,23 +59,6 @@ body {
     float: right;
     margin: 20px 20px 0 0;
   }
-
-  .tapout-request {
-    display: inline-block;
-    float: right;
-    width: 60px;
-    height: 60px;
-    margin: 20px 20px 0 0;
-    border: 3px dotted white;
-    @include rounded(50%);
-
-    .avatar {
-      width: 80%;
-      height: 80%;
-      border: none;
-      margin: 6px;
-    }
-  }
 }
 
 .bottom-stripe {
@@ -104,37 +87,18 @@ body {
       @include defaultAvatar($lightGrey, 50px);
       margin: 0 10px;
     }
-    
-    .tapout-request {
-      display: inline-block;
-      float: none;
-      width: 50px;
-      height: 50px;
-      margin: 0 10px 0;
-      border: 3px dotted white;
-      @include rounded(50%);
-
-      .avatar {
-        width: 80%;
-        height: 80%;
-        border: none;
-        margin: 4px;
-      } 
-    }   
   }
 }
 
-/*PLACEHOLDER FOR OAUTH */
-.zone .jane, .zone .other-teachers .tapout-request .jane { 
-  background-image: url("../img/testSample.png");
-  background-size: 100%;
-}
-/*
-.toggletag {
-    display:none;
+/* Pending state */
+
+.avatar-pending {
+  @include pendingAvatar(56px);
+  display: inline-block;
+  float: right;
+  margin: 20px 20px 0 0;
 }
 
-.open {
-    display:block;
-    background-image: url("../img/testSample.png");
-}*/
+.other-teachers .avatar-pending {
+    margin: 0 10px; 
+}

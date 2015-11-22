@@ -3,12 +3,12 @@ $(document).ready(function() {
 
   $(document).click(function (e) {
     $el = $(e.target);
-    if ($el.hasClass('toggletag')) {return false;} 
-    else if ($el.hasClass('clickme')) {
-        $(".toggletag").toggleClass('open');
+    if ($el.hasClass('avatar-none')) {return false;} 
+    else if ($el.hasClass('avatar')) {
+        $(".avatar-none").toggleClass('avatar');
 
     } else {
-        $(".toggletag").removeClass('open');
+        $(".avatar-none").removeClass('avatar');
     }
   });
 

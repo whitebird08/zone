@@ -71,24 +71,13 @@ body {
     width: 56px;
     height: 56px;
     background: white url("../img/avatar-empty.svg") center no-repeat;
+    overflow: hidden;
     display: inline-block;
     float: right;
     margin: 20px 20px 0 0; }
-  .zone .tapout-request {
-    display: inline-block;
-    float: right;
-    width: 60px;
-    height: 60px;
-    margin: 20px 20px 0 0;
-    border: 3px dotted white;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%; }
-    .zone .tapout-request .avatar {
-      width: 80%;
-      height: 80%;
-      border: none;
-      margin: 6px; }
+    .zone .avatar img {
+      width: 56px;
+      height: 56px; }
 
 .bottom-stripe {
   background-color: #FAFAFA;
@@ -114,27 +103,34 @@ body {
       width: 50px;
       height: 50px;
       background: #E7E7E7 url("../img/avatar-empty.svg") center no-repeat;
+      overflow: hidden;
       margin: 0 10px; }
-    .bottom-stripe .other-teachers .tapout-request {
-      display: inline-block;
-      float: none;
-      width: 50px;
-      height: 50px;
-      margin: 0 10px 0;
-      border: 3px dotted white;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%; }
-      .bottom-stripe .other-teachers .tapout-request .avatar {
-        width: 80%;
-        height: 80%;
-        border: none;
-        margin: 4px; }
+      .bottom-stripe .other-teachers .avatar img {
+        width: 50px;
+        height: 50px; }
 
-/*PLACEHOLDER FOR OAUTH */
-.zone .jane, .zone .other-teachers .tapout-request .jane {
-  background-image: url("../img/testSample.png");
-  background-size: 100%; }
+/* Pending state */
+.avatar-pending {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px dotted white;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  margin: 20px 20px 0 0; }
+  .avatar-pending img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 6px;
+    width: 80%;
+    height: 80%; }
+
+.other-teachers .avatar-pending {
+  margin: 0 10px; }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   #zone-flex, #zone-maker, #zone-library, #zone-writing {
@@ -145,12 +141,3 @@ body {
     flex: 2 100%; } }
 
 /*# sourceMappingURL=zones.css.map */
-
-.toggletag {
-    display:none;
-}
-
-.open {
-    display:block;
-    background-image: url("../img/testSample.png");
-}

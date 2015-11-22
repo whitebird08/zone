@@ -145,3 +145,12 @@ body {
     flex: 2 100%; } }
 
 /*# sourceMappingURL=zones.css.map */
+
+.toggletag {
+    display:none;
+}
+
+.open {
+    display:block;
+    background-image: url("../img/testSample.png");
+}

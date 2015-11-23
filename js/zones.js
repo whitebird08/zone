@@ -1,15 +1,23 @@
-$(document).ready(function() {
-  console.log("The document is ready!");
+// $(document).ready(function() {
+//   console.log("The document is ready!");
 
-  $(document).click(function (e) {
-    $el = $(e.target);
-    if ($el.hasClass('avatar-none')) {return false;} 
-    else if ($el.hasClass('avatar')) {
-        $(".avatar-none").toggleClass('avatar');
+var images = [
+              "",
+               // "http://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Blacksquirrelrev.jpg/250px-Blacksquirrelrev.jpg",
+              "./img/testSample.png"
+              ];
+var clicks = 0;
 
-    } else {
-        $(".avatar-none").removeClass('avatar');
-    }
-  });
+$(document).ready(start);
 
-});
+function start(){
+   $("#image").click(changeImage);
+}
+
+function changeImage(){
+   clicks++;
+   img = images[clicks % images.length];
+   $("#image").attr("src", img);
+}
+
+// });
